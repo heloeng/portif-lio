@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:portifolio/src/contato/Contato_page.dart';
 import 'package:portifolio/src/homePage1/home_page1.dart';
 import 'package:portifolio/src/projetos/projetos_page.dart';
@@ -31,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _paginas[0],
+      body: _paginas[_paginaAtual],
       bottomNavigationBar: BottomNavigationBar(
 
           //indica qual o item que deve estar
@@ -45,12 +44,12 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.home),
                 backgroundColor: Colors.red),
             BottomNavigationBarItem(
-                label: 'Contato',
-                icon: Icon(Icons.contact_page),
-                backgroundColor: Colors.red),
-            BottomNavigationBarItem(
                 label: 'Projetos',
                 icon: Icon(Icons.video_library),
+                backgroundColor: Colors.red),
+            BottomNavigationBarItem(
+                label: 'Contato',
+                icon: Icon(Icons.contact_page),
                 backgroundColor: Colors.red),
           ]),
     );
